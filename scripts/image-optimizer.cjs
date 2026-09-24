@@ -257,6 +257,8 @@ function responsiveSizes(className) {
   if (/\bfeature-screen\b/.test(className)) return '(max-width: 767px) 78vw, (max-width: 991px) 38vw, 24vw';
   if (/\bfitjourney-image\b/.test(className)) return '(max-width: 767px) 84vw, (max-width: 991px) 42vw, 30vw';
   if (/\bworkout-thumbnail\b/.test(className)) return '(max-width: 767px) 100vw, 88vw';
+  if (/\bavatar-group-item\b/.test(className)) return '48px';
+  if (/\btestimonial-client-image\b/.test(className)) return '52px';
   if (/\btestimonial-star\b/.test(className)) return '116px';
   if (/\bdownload-banner-image\b/.test(className)) return '100vw';
   if (/\bcta-(?:first|second|third)-image\b/.test(className)) return '(max-width: 767px) 148px, 31vw';

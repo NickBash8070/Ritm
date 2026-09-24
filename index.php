@@ -480,7 +480,7 @@ Template name: Ритм — фитнес и полезные привычки
 						<h2 data-w-id="afd01eb2-c2e9-a50f-a56f-d0e288389941" style="-webkit-transform:translate3d(0, 80px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 80px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 80px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 80px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0;filter:blur(10px)" class="testimonial-heading">Живой опыт</h2>
 						<p data-w-id="bb752ece-6047-8de6-a38b-c1f73a2aefde" style="-webkit-transform:translate3d(0, 80px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 80px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 80px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 80px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0;filter:blur(10px)" class="body-text testimonial center">Истории, которые помогают<br>двигаться дальше.</p>
 						<div data-w-id="fdcd8887-6d28-4af0-d846-42424a605124" style="-webkit-transform:translate3d(0, 80px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 80px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 80px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 80px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0;filter:blur(10px)" class="ratings-component">
-							<div class="avatar-group-component"><img loading="lazy" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Алексей Морозов" class="avatar-group-item"><img loading="lazy" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Мария Волкова" class="avatar-group-item"><img loading="lazy" src="https://randomuser.me/api/portraits/men/12.jpg" alt="Илья Соколов" class="avatar-group-item"><img loading="lazy" src="https://randomuser.me/api/portraits/women/65.jpg" alt="Анна Кузнецова" class="avatar-group-item"></div>
+							<div class="avatar-group-component"><img loading="lazy" src="/images/remote/men-32.jpg" alt="Алексей Морозов" class="avatar-group-item"><img loading="lazy" src="/images/remote/women-44.jpg" alt="Мария Волкова" class="avatar-group-item"><img loading="lazy" src="/images/remote/men-12.jpg" alt="Илья Соколов" class="avatar-group-item"><img loading="lazy" src="/images/remote/women-65.jpg" alt="Анна Кузнецова" class="avatar-group-item"></div>
 							<div class="ratings-wrapper">
 								<div class="hero-star-wrapper"><img src="<?php echo get_template_directory_uri() ?>/images/688e3ef40a5cc11c64f40490_Star20ratings.png" loading="lazy" width="240.5" alt class="hero-star-image">
 									<div class="text-20px semi-bold-white">4,9</div>
@@ -500,7 +500,7 @@ Template name: Ритм — фитнес и полезные привычки
 												<div class="text-16px deep-text">С «Ритмом» тренироваться стало проще. Понятный план помогает не терять мотивацию и двигаться дальше!</div>
 											</div>
 											<div class="testimonial-client-wrapper"><img src="<?php echo get_template_directory_uri() ?>/images/688e3ef40a5cc11c64f40490_Star20ratings.png" loading="lazy" width="70" alt class="testimonial-star">
-																								<div class="testimonial-client-holder"><img src="https://randomuser.me/api/portraits/men/32.jpg" loading="lazy" width="70" alt="Алексей Морозов" class="testimonial-client-image">
+																								<div class="testimonial-client-holder"><img src="/images/remote/men-32.jpg" loading="lazy" width="70" alt="Алексей Морозов" class="testimonial-client-image">
 													<div class="client-name">
 																								<div class="text-20px is-highlight">Алексей Морозов, 28 лет</div>
 														<div class="text-16px">Пользователь приложения</div>
@@ -518,7 +518,7 @@ Template name: Ритм — фитнес и полезные привычки
 												<div class="text-16px deep-text">Раньше я часто пропускал занятия. Теперь есть план на день, и найти время для тренировки гораздо легче.</div>
 											</div>
 											<div class="testimonial-client-wrapper"><img src="<?php echo get_template_directory_uri() ?>/images/688e3ef40a5cc11c64f40490_Star20ratings.png" loading="lazy" width="70" alt class="testimonial-star">
-																								<div class="testimonial-client-holder"><img src="https://randomuser.me/api/portraits/women/44.jpg" loading="lazy" width="70" alt="Мария Волкова" class="testimonial-client-image">
+																								<div class="testimonial-client-holder"><img src="/images/remote/women-44.jpg" loading="lazy" width="70" alt="Мария Волкова" class="testimonial-client-image">
 													<div class="client-name">
 																								<div class="text-20px is-highlight">Мария Волкова, 31 год</div>
 														<div class="text-16px deep-text">Пользователь приложения</div>
@@ -536,7 +536,7 @@ Template name: Ритм — фитнес и полезные привычки
 												<div class="text-16px deep-text">Мне нравится видеть свой прогресс. Даже небольшие результаты дают желание продолжать.</div>
 											</div>
 											<div class="testimonial-client-wrapper"><img src="<?php echo get_template_directory_uri() ?>/images/688e3ef40a5cc11c64f40490_Star20ratings.png" loading="lazy" width="70" alt class="testimonial-star">
-																								<div class="testimonial-client-holder"><img src="https://randomuser.me/api/portraits/men/12.jpg" loading="lazy" width="70" alt="Илья Соколов" class="testimonial-client-image">
+																								<div class="testimonial-client-holder"><img src="/images/remote/men-12.jpg" loading="lazy" width="70" alt="Илья Соколов" class="testimonial-client-image">
 													<div class="client-name">
 																								<div class="text-20px is-highlight">Илья Соколов, 26 лет</div>
 														<div class="text-16px deep-text">Пользователь приложения</div>
@@ -554,7 +554,7 @@ Template name: Ритм — фитнес и полезные привычки
 																<div class="text-16px deep-text">Наконец-то нашёл удобный ритм — тренировки, прогулки и отдых без ощущения постоянной гонки.</div>
 											</div>
 											<div class="testimonial-client-wrapper"><img src="<?php echo get_template_directory_uri() ?>/images/688e3ef40a5cc11c64f40490_Star20ratings.png" loading="lazy" width="70" alt class="testimonial-star">
-																								<div class="testimonial-client-holder"><img src="https://randomuser.me/api/portraits/women/65.jpg" loading="lazy" width="70" alt="Анна Кузнецова" class="testimonial-client-image">
+																								<div class="testimonial-client-holder"><img src="/images/remote/women-65.jpg" loading="lazy" width="70" alt="Анна Кузнецова" class="testimonial-client-image">
 													<div class="client-name">
 																								<div class="text-20px is-highlight">Анна Кузнецова, 29 лет</div>
 														<div class="text-16px deep-text">Пользователь приложения</div>
@@ -572,7 +572,7 @@ Template name: Ритм — фитнес и полезные привычки
 												<div class="text-16px deep-text">Всё нужное в одном месте. Открываю приложение и сразу понимаю, на чём сосредоточиться сегодня.</div>
 											</div>
 											<div class="testimonial-client-wrapper"><img src="<?php echo get_template_directory_uri() ?>/images/688e3ef40a5cc11c64f40490_Star20ratings.png" loading="lazy" width="70" alt class="testimonial-star">
-																								<div class="testimonial-client-holder"><img src="https://randomuser.me/api/portraits/women/49.jpg" loading="lazy" width="70" alt="Ольга Лебедева" class="testimonial-client-image">
+																								<div class="testimonial-client-holder"><img src="/images/remote/women-49.jpg" loading="lazy" width="70" alt="Ольга Лебедева" class="testimonial-client-image">
 													<div class="client-name">
 																								<div class="text-20px is-highlight">Ольга Лебедева, 34 года</div>
 														<div class="text-16px deep-text">Анова Флоу</div>
@@ -590,7 +590,7 @@ Template name: Ритм — фитнес и полезные привычки
 												<div class="text-16px deep-text">Начал с небольших целей и постепенно втянулся. Теперь движение — привычная часть моего дня.</div>
 											</div>
 											<div class="testimonial-client-wrapper"><img src="<?php echo get_template_directory_uri() ?>/images/688e3ef40a5cc11c64f40490_Star20ratings.png" loading="lazy" width="70" alt class="testimonial-star">
-																								<div class="testimonial-client-holder"><img src="https://randomuser.me/api/portraits/men/45.jpg" loading="lazy" width="70" alt="Дмитрий Орлов" class="testimonial-client-image">
+																								<div class="testimonial-client-holder"><img src="/images/remote/men-45.jpg" loading="lazy" width="70" alt="Дмитрий Орлов" class="testimonial-client-image">
 													<div class="client-name">
 																								<div class="text-20px is-highlight">Дмитрий Орлов, 30 лет</div>
 														<div class="text-16px deep-text">Пользователь приложения</div>
