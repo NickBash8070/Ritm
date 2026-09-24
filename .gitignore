@@ -8,3 +8,5 @@ node_modules/
 *.php
 !index.php
 !header_block.php
+
+.vercel
