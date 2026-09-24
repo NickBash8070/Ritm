@@ -3281,10 +3281,14 @@ h1, h2, h3,
 .rhythm-progress-section {
   position:relative;
   z-index:2;
-  padding:clamp(88px,10vw,144px) 0;
+  padding:0;
   overflow:hidden;
   background:var(--ritm-site-background,#0e1318);
   border-top:1px solid rgba(220,227,220,.055);
+}
+.rhythm-progress-section > .container {
+  padding-top:var(--ritm-space-section);
+  padding-bottom:var(--ritm-space-section);
 }
 .rhythm-progress-layout {
   display:grid;
@@ -3397,7 +3401,6 @@ h1, h2, h3,
   .rhythm-progress-chart {padding:22px;}
 }
 @media (max-width:767px) {
-  .rhythm-progress-section {padding:76px 0 84px;}
   .rhythm-progress-layout {grid-template-columns:minmax(0,1fr);gap:28px;}
   .rhythm-progress-intro {max-width:560px;}
   .rhythm-progress-intro h2 {max-width:480px;font-size:clamp(34px,9vw,48px);}
