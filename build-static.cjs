@@ -62,7 +62,6 @@ function rewriteCss(css, manifest, isCustomStylesheet) {
   let result = rewriteCssImages(css, manifest);
   if (isCustomStylesheet) {
     result = appendResponsiveHeroBackground(result, manifest);
-    result += '\npicture.ritm-image-picture{display:contents}\n';
   }
   return result;
 }

@@ -321,9 +321,9 @@ function rewriteHtmlImages(html, manifest) {
     tag = setAttribute(tag, 'decoding', 'async');
     if (isHero) tag = setAttribute(tag, 'fetchpriority', 'high');
 
-    const avifSource = `<source type="image/avif" srcset="${srcset(asset.variants, 'avif')}" sizes="${sizes}">`;
-    const webpSource = `<source type="image/webp" srcset="${srcset(asset.variants, 'webp')}" sizes="${sizes}">`;
-    return `<picture class="ritm-image-picture">${avifSource}${webpSource}${tag}</picture>`;
+    // Keep the original <img> node in place. Webflow's scroll interactions and
+    // the CTA image assembly depend on its exact DOM/layout position.
+    return tag;
   });
 }
 
