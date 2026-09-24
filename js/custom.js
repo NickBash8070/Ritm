@@ -541,25 +541,6 @@
     }, { threshold:0.18, rootMargin:'0px 0px -8% 0px' });
     observer.observe(banner);
   };
-  const initRhythmProgressChart = () => {
-    const charts = Array.from(document.querySelectorAll('[data-rhythm-progress-chart]'));
-    if (!charts.length) return;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
-      charts.forEach((chart) => chart.classList.add('is-visible'));
-      return;
-    }
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      });
-    }, { threshold:0.2, rootMargin:'0px 0px -6% 0px' });
-    charts.forEach((chart) => {
-      chart.classList.add('is-animated');
-      observer.observe(chart);
-    });
-  };
   const initFitjourneyCardReveal = () => {
     const cards = Array.from(document.querySelectorAll('.fitjourney-section .fitjourney-grid > .fitjourney-card-wrapper'));
     if (!cards.length) return;
@@ -932,7 +913,6 @@
     initFaqIcons();
     initOnboardingScreens();
     initDownloadBannerReveal();
-    initRhythmProgressChart();
     initFitjourneyCardReveal();
     initCtaBackground();
     initCtaSequence();

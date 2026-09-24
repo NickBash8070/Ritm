@@ -473,47 +473,6 @@ Template name: Ритм — фитнес и полезные привычки
 				</div>
 			</div>
 		</section>
-		<section id="rhythm-progress" class="rhythm-progress-section" aria-labelledby="rhythm-progress-title">
-			<div class="w-layout-blockcontainer container w-container">
-				<div class="rhythm-progress-layout">
-					<div class="rhythm-progress-intro">
-						<h2 id="rhythm-progress-title">Движение<br>в ритме</h2>
-						<p>Смотри на минуты движения за неделю и замечай, как короткие занятия становятся привычкой.</p>
-					</div>
-					<div class="rhythm-progress-chart" data-rhythm-progress-chart>
-						<div class="rhythm-progress-chart-heading">
-							<div class="rhythm-progress-chart-title"><span class="rhythm-progress-dot" aria-hidden="true"></span><h3>Минуты движения</h3></div>
-							<span class="rhythm-progress-sample">Пример данных</span>
-						</div>
-						<svg class="rhythm-progress-svg" viewBox="0 0 720 320" role="img" aria-labelledby="rhythm-progress-chart-title rhythm-progress-chart-description">
-							<title id="rhythm-progress-chart-title">Минуты движения за неделю</title>
-							<desc id="rhythm-progress-chart-description">Условный пример активности: понедельник — 18 минут, вторник — 32, среда — 24, четверг — 44, пятница — 36, суббота — 58, воскресенье — 50.</desc>
-							<defs>
-								<linearGradient id="rhythm-progress-line" x1="56" y1="0" x2="664" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#84f4dc"/><stop offset=".72" stop-color="#84f4dc"/><stop offset="1" stop-color="#e7cbfe"/></linearGradient>
-								<linearGradient id="rhythm-progress-fill" x1="0" y1="42" x2="0" y2="268" gradientUnits="userSpaceOnUse"><stop stop-color="#84f4dc" stop-opacity=".22"/><stop offset="1" stop-color="#84f4dc" stop-opacity="0"/></linearGradient>
-							</defs>
-							<g class="rhythm-progress-grid" aria-hidden="true">
-								<line x1="56" y1="52" x2="664" y2="52"/><line x1="56" y1="124" x2="664" y2="124"/><line x1="56" y1="196" x2="664" y2="196"/><line x1="56" y1="268" x2="664" y2="268"/>
-								<text x="12" y="56">60</text><text x="12" y="128">40</text><text x="12" y="200">20</text><text x="24" y="272">0</text>
-							</g>
-							<path class="rhythm-progress-area" d="M100 203 C129 192 158 165 187 153 S244 177 273 182 S331 120 360 110 S418 134 447 138 S504 55 533 59 S591 88 620 88 L620 268 L100 268 Z"/>
-							<path class="rhythm-progress-glow" pathLength="1" d="M100 203 C129 192 158 165 187 153 S244 177 273 182 S331 120 360 110 S418 134 447 138 S504 55 533 59 S591 88 620 88"/>
-							<path class="rhythm-progress-line" pathLength="1" d="M100 203 C129 192 158 165 187 153 S244 177 273 182 S331 120 360 110 S418 134 447 138 S504 55 533 59 S591 88 620 88"/>
-							<g class="rhythm-progress-points" aria-hidden="true">
-								<g style="--point-index:0"><circle class="rhythm-progress-halo" cx="100" cy="203" r="12"/><circle class="rhythm-progress-point" cx="100" cy="203" r="4.5"/></g>
-								<g style="--point-index:1"><circle class="rhythm-progress-halo" cx="187" cy="153" r="12"/><circle class="rhythm-progress-point" cx="187" cy="153" r="4.5"/></g>
-								<g style="--point-index:2"><circle class="rhythm-progress-halo" cx="273" cy="182" r="12"/><circle class="rhythm-progress-point" cx="273" cy="182" r="4.5"/></g>
-								<g style="--point-index:3"><circle class="rhythm-progress-halo" cx="360" cy="110" r="12"/><circle class="rhythm-progress-point" cx="360" cy="110" r="4.5"/></g>
-								<g style="--point-index:4"><circle class="rhythm-progress-halo" cx="447" cy="138" r="12"/><circle class="rhythm-progress-point" cx="447" cy="138" r="4.5"/></g>
-								<g style="--point-index:5"><circle class="rhythm-progress-halo" cx="533" cy="59" r="12"/><circle class="rhythm-progress-point" cx="533" cy="59" r="4.5"/></g>
-								<g style="--point-index:6"><circle class="rhythm-progress-halo" cx="620" cy="88" r="12"/><circle class="rhythm-progress-point" cx="620" cy="88" r="4.5"/></g>
-							</g>
-						</svg>
-						<div class="rhythm-progress-days" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
-					</div>
-				</div>
-			</div>
-		</section>
 		<section class="testimonial-section">
 			<div class="w-layout-blockcontainer container testimonial w-container">
 				<div class="section-wrapper testimonial-space">
