@@ -315,8 +315,6 @@ function rewriteHtmlImages(html, manifest) {
     tag = setAttribute(tag, 'src', publicImagePath(asset.variants.at(-1).webp));
     tag = setAttribute(tag, 'srcset', srcset(asset.variants, 'webp'));
     tag = setAttribute(tag, 'sizes', sizes);
-    tag = setAttribute(tag, 'width', asset.width);
-    tag = setAttribute(tag, 'height', asset.height);
     tag = setAttribute(tag, 'loading', isHero ? 'eager' : (getAttribute(tag, 'loading') || 'lazy'));
     tag = setAttribute(tag, 'decoding', 'async');
     if (isHero) tag = setAttribute(tag, 'fetchpriority', 'high');
