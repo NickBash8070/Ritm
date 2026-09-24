@@ -1,0 +1,10 @@
+node_modules/
+/dist/
+/.vercel/
+.preview-*.log
+.env*
+
+# Publish only the two frontend templates needed for the static export.
+*.php
+!index.php
+!header_block.php
