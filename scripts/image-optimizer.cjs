@@ -94,7 +94,7 @@ function setAttribute(tag, name, value) {
   return tag.replace(/\s*\/?\s*>$/, end => ` ${name}="${escaped}"${end}`);
 }
 
-function collectReferences(html, stylesheets) {
+function collectReferences(html, stylesheets, scripts = []) {
   const references = new Map();
   const record = (url, role) => {
     const relative = extractLocalImagePath(url);
@@ -121,6 +121,28 @@ function collectReferences(html, stylesheets) {
   for (const css of [...stylesheets, ...inlineStyles]) {
     for (const match of css.matchAll(/url\(\s*(?:(["'])(.*?)\1|([^)]*?))\s*\)/gi)) {
       record(match[2] || match[3], 'css');
+    }
+  }
+
+  // JavaScript-created images are invisible to the HTML/CSS scanner. Collect
+  // literal image URLs and expand simple templates such as
+  // `/images/new/icon/${file}` from their local filename arrays.
+  for (const script of scripts) {
+    const fileArrays = [...script.matchAll(/\b(?:const|let|var)\s+(\w*Files)\s*=\s*\[([\s\S]*?)\]/g)];
+    for (const match of script.matchAll(/(['"`])(\/images\/[^'"`\s]*)\1/g)) {
+      record(match[2], 'script');
+    }
+    for (const template of script.matchAll(/`([^`]*?)\$\{\s*(\w+)\s*\}([^`]*)`/g)) {
+      const [, prefix, variable, suffix] = template;
+      if (!prefix.includes('/images/')) continue;
+      const variableDeclaration = fileArrays.find(array => array[1] === variable);
+      const precedingFileArray = fileArrays.filter(array => array.index < template.index).at(-1);
+      const declaration = variableDeclaration || precedingFileArray;
+      if (!declaration) continue;
+      for (const filename of declaration[2].matchAll(/(['"])(.*?)\1/g)) {
+        if (!/\.(?:svg|png|jpe?g|webp|avif)$/i.test(filename[2])) continue;
+        record(`${prefix}${filename[2]}${suffix}`, 'script');
+      }
     }
   }
   return references;
@@ -162,7 +184,7 @@ async function optimizeRaster(relative, roles) {
   const screenshot = extension === '.png' || /screen|portrait|phone|hand/i.test(relative);
   const stem = createFileStem(relative, sourcePath);
   const variants = [];
-  const needsResponsiveVariants = roles.has('image') || roles.has('css');
+  const needsResponsiveVariants = roles.has('image') || roles.has('css') || roles.has('script');
   fs.mkdirSync(webRoot, { recursive: true });
 
   for (const variantWidth of needsResponsiveVariants ? outputWidths(width) : []) {
@@ -209,9 +231,9 @@ async function optimizeRaster(relative, roles) {
   return optimized;
 }
 
-async function prepareImages({ html, stylesheets }) {
+async function prepareImages({ html, stylesheets, scripts = [] }) {
   archiveOriginals();
-  const references = collectReferences(html, stylesheets);
+  const references = collectReferences(html, stylesheets, scripts);
   const manifest = new Map();
 
   for (const [relative, roles] of references) {
@@ -221,7 +243,7 @@ async function prepareImages({ html, stylesheets }) {
       manifest.set(relative, { passthrough: true, roles: [...roles] });
       continue;
     }
-    if (!roles.has('image') && !roles.has('css') && !roles.has('social')) {
+    if (!roles.has('image') && !roles.has('css') && !roles.has('social') && !roles.has('script')) {
       manifest.set(relative, { passthrough: true, roles: [...roles] });
       continue;
     }
