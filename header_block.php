@@ -2,6 +2,26 @@
 		<meta charset="utf-8">
 		<meta name="description" content="Ритм — тренировки в твоём ритме. Персональные планы, полезные привычки и понятная статистика прогресса.">
 <meta name="theme-color" content="#0D0D0D">
+		<link rel="canonical" href="https://ritm-rose.vercel.app/">
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<meta property="og:locale" content="ru_RU">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="РИТМ">
+		<meta property="og:url" content="https://ritm-rose.vercel.app/">
+		<meta property="og:title" content="РИТМ — тренируйся в своём ритме">
+		<meta property="og:description" content="Персональные тренировки, полезные привычки и понятный план, который помогает двигаться регулярно.">
+		<meta property="og:image" content="https://ritm-rose.vercel.app/og/ritm-share.png">
+		<meta property="og:image:secure_url" content="https://ritm-rose.vercel.app/og/ritm-share.png">
+		<meta property="og:image:type" content="image/png">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<meta property="og:image:alt" content="РИТМ — приложение для тренировок и полезных привычек">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="РИТМ — тренируйся в своём ритме">
+		<meta name="twitter:description" content="Персональные тренировки, полезные привычки и понятный план, который помогает двигаться регулярно.">
+		<meta name="twitter:image" content="https://ritm-rose.vercel.app/og/ritm-share.png">
 		<link href="https://cdn.prod.website-files.com" rel="preconnect" crossorigin="anonymous">
 		
 		

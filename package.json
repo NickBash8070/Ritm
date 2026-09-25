@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "node build-static.cjs"
+    "build": "node scripts/generate-social-card.cjs && node build-static.cjs"
   },
   "devDependencies": {
     "esbuild": "^0.28.2",
