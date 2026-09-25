@@ -209,6 +209,29 @@
     const cta = document.querySelector('.cta-section');
     if (!cta) return;
     const footer = document.querySelector('.footer-section');
+    // Keep a small CSS-only brand glow behind the CTA and footer on phones.
+    if (window.matchMedia('(max-width: 767px)').matches) {
+      const layer = document.createElement('div');
+      layer.className = 'cta-section-background-static';
+      layer.setAttribute('aria-hidden', 'true');
+      document.body.insertBefore(layer, document.body.firstChild);
+      if ('IntersectionObserver' in window) {
+        let ctaVisible = false;
+        let footerVisible = false;
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.target === cta) ctaVisible = entry.isIntersecting;
+            if (entry.target === footer) footerVisible = entry.isIntersecting;
+          });
+          layer.classList.toggle('is-active', ctaVisible || footerVisible);
+        }, { rootMargin:'120px 0px' });
+        observer.observe(cta);
+        if (footer) observer.observe(footer);
+      } else {
+        layer.classList.add('is-active');
+      }
+      return;
+    }
     const faq = document.querySelector('#faq');
     const canvas = document.createElement('canvas');
     canvas.className = 'cta-section-background-canvas';

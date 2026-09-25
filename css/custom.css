@@ -1159,10 +1159,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex="0"]:focus-vi
     box-shadow:none !important;
   }
   .navbar-component .home-01-navbar-menu-button:focus-visible {outline:0 !important;box-shadow:none !important;}
-  .navbar-component .menu-icon-component {width:52px;height:52px;margin:0;}
-  .navbar-component .menu-icon-line-top,
-  .navbar-component .menu-icon-line-middle,
-  .navbar-component .menu-icon-line-bottom {background-color:#0e1318;color:#0e1318;}
   .navbar-component:has(.w-nav-button.w--open),
   .navbar-component:has(.w-nav-overlay.is-closing) {
     background-color:#0e1318 !important;
@@ -2918,45 +2914,12 @@ h1, h2, h3,
     width:44px;
     height:44px;
   }
-  .navbar-component .menu-icon-component {width:44px;height:44px;}
-  .navbar-component .menu-icon-line-top,
-  .navbar-component .menu-icon-line-middle,
-  .navbar-component .menu-icon-line-bottom {
-    width:18px;
-    height:1.5px;
-  }
-  .navbar-component .menu-icon-line-middle {margin-top:4px;margin-bottom:4px;}
   .navbar-component .home-01-nav-menu[data-nav-menu-open] .home-menu-left {
     transform:translateY(-36px);
   }
   .navbar-component .home-01-nav-menu[data-nav-menu-open] .navbar-link {
     padding:5px 16px;
     font-size:clamp(18px,5vw,20px);
-  }
-  .navbar-component .home-01-navbar-menu-button.w--open .menu-icon-component {
-    position:relative;
-  }
-  .navbar-component .home-01-navbar-menu-button.w--open .menu-icon-component > .menu-icon-line-top,
-  .navbar-component .home-01-navbar-menu-button.w--open .menu-icon-component > .menu-icon-line-middle,
-  .navbar-component .home-01-navbar-menu-button.w--open .menu-icon-component > .menu-icon-line-bottom {
-    opacity:0 !important;
-    transform:none !important;
-  }
-  .navbar-component .home-01-navbar-menu-button.w--open .menu-icon-component::before,
-  .navbar-component .home-01-navbar-menu-button.w--open .menu-icon-component::after {
-    content:"";
-    position:absolute;
-    top:50%;
-    left:50%;
-    width:17px;
-    height:1.5px;
-    border-radius:2px;
-    background:#0e1318;
-    transform:translate(-50%,-50%) rotate(45deg);
-    pointer-events:none;
-  }
-  .navbar-component .home-01-navbar-menu-button.w--open .menu-icon-component::after {
-    transform:translate(-50%,-50%) rotate(-45deg);
   }
   .navbar-component .w-nav-overlay:not(.is-closing):has(.home-01-nav-menu[data-nav-menu-open]) {
     clip-path:none;
@@ -2966,6 +2929,49 @@ h1, h2, h3,
     clip-path:none;
     animation:ritm-nav-panel-out-phone .24s ease-in both;
   }
+}
+
+/* CSS owns the icon; legacy Webflow line selectors must not target it. */
+@media (max-width:991px) {
+  .ritm-menu-icon {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    display:block;
+    width:28px;
+    height:24px;
+    flex:none;
+    pointer-events:none;
+  }
+  .ritm-menu-icon::before,
+  .ritm-menu-icon::after {
+    content:"";
+    position:absolute;
+    top:11px;
+    left:0;
+    width:100%;
+    height:2px;
+    border-radius:2px;
+    background:#0e1318;
+    transform-origin:50% 50%;
+    transition:transform .3s cubic-bezier(.4,0,.2,1);
+  }
+  .ritm-menu-icon::before {transform:translateY(-4px) rotate(0deg);}
+  .ritm-menu-icon::after {transform:translateY(4px) rotate(0deg);}
+  .home-01-navbar-menu-button.w--open .ritm-menu-icon::before {
+    transform:translateY(0) rotate(45deg);
+  }
+  .home-01-navbar-menu-button.w--open .ritm-menu-icon::after {
+    transform:translateY(0) rotate(-45deg);
+  }
+}
+@media (max-width:479px) {
+  .ritm-menu-icon {width:24px;}
+}
+@media (prefers-reduced-motion:reduce) {
+  .ritm-menu-icon::before,
+  .ritm-menu-icon::after {transition:none;}
 }
 
 /* Keep the onboarding text crisp throughout its entrance reveal. */
@@ -3277,3 +3283,25 @@ h1, h2, h3,
   .cta-section > .container {padding-top:12px !important;}
 }
 
+/* A lightweight closing backdrop for phones, in place of the full-screen WebGL wave. */
+@media screen and (max-width:767px) {
+  .cta-section {
+    background-color:transparent !important;
+    background-image:none !important;
+  }
+  .cta-section-background-static {
+    position:fixed;
+    z-index:0;
+    inset:0;
+    display:block;
+    pointer-events:none;
+    opacity:0;
+    background:
+      radial-gradient(ellipse 86% 62% at -6% 54%, rgba(132,244,220,.13), transparent 74%),
+      radial-gradient(ellipse 86% 62% at 106% 72%, rgba(194,156,255,.12), transparent 74%),
+      linear-gradient(180deg, #0d1016 0%, #11151e 44%, #121521 73%, #0d1016 100%);
+    transition:opacity .42s ease;
+  }
+  .cta-section-background-static.is-active {opacity:1;}
+  .cta-section-background-canvas {display:none !important;}
+}
