@@ -46,14 +46,6 @@ function renderPage() {
   );
   html = html.replace(/<\?php[\s\S]*?\?>/g, '');
 
-  const deploymentHost = (process.env.VERCEL_URL || 'ritm-rose.vercel.app')
-    .replace(/^https?:\/\//, '')
-    .replace(/\/$/, '');
-  html = html.replaceAll(
-    'https://ritm-rose.vercel.app/og/ritm-share.png',
-    `https://${deploymentHost}/og/ritm-share.png`
-  );
-
   const cssVersion = fs.statSync(path.join(root, 'css', 'custom.css')).mtimeMs;
   return html.replace(
     '</head>',
